@@ -19,7 +19,7 @@ class BoardsController < ApplicationController
       redirect_to("/boards/#{@new_board.id}", { :notice => "Board created successfully." })
     else
       redirect_to("/", { :alert => @new_board.errors.full_messages.to_sentence })
+    end
   end
-
  
 end
