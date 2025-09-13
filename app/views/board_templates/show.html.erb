@@ -1,3 +1,7 @@
+<div class="text-success">
+  <%= notice %>
+</div>
+
 <% the_id =  params.fetch("path_id") %>
 
 <% matching_boards = Board.where({ :id => the_id }) %>
