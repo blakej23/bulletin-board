@@ -14,9 +14,12 @@ class BoardsController < ApplicationController
     @new_board.name = params.fetch("name_param")
     @new_board.save
 
-    
-  redirect_to("/boards/#{@new_board.id}", :notice => "Board created successfully.")
+  
+    if @new_board.id != nil
+      redirect_to("/boards/#{@new_board.id}", { :notice => "Board created successfully." })
+    else
+      redirect_to("/", { :alert => @new_board.errors.full_messages.to_sentence })
   end
 
-
+ 
 end
