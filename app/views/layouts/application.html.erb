@@ -20,9 +20,14 @@
     <%# Includes all stylesheet files in app/assets/stylesheets %>
     <%= stylesheet_link_tag :app, "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.colors.min.css">
   </head>
 
-  <body>
-    <%= yield %>
+  <body class="pico">
+    <div class="container-two-thirds">
+      <%= yield %>
+    </div>
   </body>
 </html>
